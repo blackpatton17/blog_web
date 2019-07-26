@@ -3,7 +3,7 @@ from blog.models import Article
 import markdown
 # Create your views here.
 def index(request):
-    blog = Article.objects.get(id = 1)
+    blog = Article.objects.get(title = "index")
     blog_title = blog.title
     blog_content = blog.content
     return render(request, 'blog.html', {'blog': blog_title, 'blog_content': blog_content})
